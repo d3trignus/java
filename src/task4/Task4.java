@@ -1,3 +1,6 @@
+// 4. Дана матрица. Построить матрицу, полученную перестановкой
+//        столбцов (первого с последним, второго с предпоследним и т. д.) из данной.
+
 package task4;
 
 import java.util.Scanner;
@@ -12,14 +15,18 @@ public class Task4 {
 
         int[][] matrix = new int[n][n];
         MatricesHandler.fillMatrix(matrix, n, in);
+//        MatricesHandler.fillMatrixStream(matrix, n, in);
 
         System.out.println("Your matrix: ");
         MatricesHandler.printMatrix(matrix, n);
+//        MatricesHandler.printMatrixStream(matrix, n);
 
         MatricesHandler.swapColumns(matrix, n);
+//        MatricesHandler.swapColumnsStream(matrix, n);
 
         System.out.println("Edited matrix: ");
         MatricesHandler.printMatrix(matrix, n);
+//        MatricesHandler.printMatrixStream(matrix, n);
 
         in.close();
     }
