@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <!-- 1. Вывод в консоль с цветным выделением уровней -->
+        <Console name="ConsoleAppender" target="SYSTEM_OUT">
+            <PatternLayout pattern="%highlight{%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n}"/>
+        </Console>
+
+        <!-- 2. Вывод в файл с ротацией (максимум 3 файла) -->
+        <RollingFile name="FileAppender" fileName="logs/app.log"
+                     filePattern="logs/app-%d{yyyy-MM-dd}-%i.log.gz">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="5 MB"/> <!-- Размер одного файла -->
+            </Policies>
+            <DefaultRolloverStrategy max="3"/> <!-- Максимум 3 файла логов -->
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <!-- Уровень логирования (DEBUG, INFO, WARN, ERROR) -->
+        <Root level="debug">
+            <AppenderRef ref="ConsoleAppender"/>
+            <AppenderRef ref="FileAppender"/>
+        </Root>
+    </Loggers>
+</Configuration>
