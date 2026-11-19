@@ -1,0 +1,52 @@
+# ===== Maven =====
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+# Не игнорировать .mvn/wrapper/maven-wrapper.properties — нужен для сборки
+.mvn/wrapper/maven-wrapper.jar
+
+# ===== IntelliJ IDEA =====
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# ===== VS Code / Eclipse / NetBeans (на случай смены IDE) =====
+.vscode/
+.settings/
+.classpath
+.project
+.factorypath
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# ===== Компилированные файлы Java =====
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+
+# ===== Логи =====
+*.log
+logs/
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+
+# ===== Прочее =====
+*.tmp
+*.bak
+*.swp
+*~
